@@ -1,0 +1,144 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+//CREATING MARKSHEET IN C PROGRAMMING
+//OBTAINED MARKS
+//PERCENTAGE
+//GRADE
+//REMARKS
+//SUPPLY OR FAIL
+
+char name[30], dept[30], section[30];
+int rollno, math, biology, english, physics, chemistry, obtained, percentage;
+
+//taking user details
+
+printf("Enter Your Name: \n");
+scanf("%s",&name);
+printf("Enter Your Department: \n");
+scanf("%s",&dept);
+printf("Enter Your Roll No: \n");
+scanf("%d",&rollno);
+printf("Enter Your Section: \n");
+scanf("%s",&section);
+
+//taking user marks
+
+printf("Enter math marks:\n");
+scanf("%d",&math);
+printf("Enter biology marks: \n");
+scanf("%d",&biology);
+printf("Enter english marks:\n");
+scanf("%d",&english);
+printf("Enter physics marks:\n");
+scanf("%d",&physics);
+printf("Enter chemistry marks:\n");
+scanf("%d",&chemistry);
+
+// calculating obtained marks and percentage
+obtained= math+biology+english+physics+chemistry;
+percentage= obtained*100/500;
+// printing marksheet
+
+printf("-------------------------MARKSHEET-------------------------- \n");
+printf("             SRM INSTITUTE OF SCIENCE AND TECHNOLOGY          \n");       
+printf("Your Name is %s \n",name);
+printf("Your Department is %s \n",dept);
+printf("Your Roll Number is %d \n",rollno);
+printf("Your Section is %s \n",section);
+printf("Your Obtained marks is %d \n",obtained);
+printf("Your Percentage is %d \n",percentage);
+//if else if for grade
+   
+if(percentage>=80)
+{
+ printf("Grade: A-1 \n");
+}
+else if(percentage>=70)
+{
+ printf("Grade:A \n");
+}
+else if(percentage>=60)
+{
+ printf("Grade:B \n");
+}
+else if(percentage>=50)
+{
+ printf("Grade:C \n");
+}
+else if(percentage>=40)
+{
+ printf("Grade:D \n");
+}
+else if(percentage>=33)
+{
+ printf("Grade:E \n");
+}
+else
+{
+ printf("Grades:F -- Fail \n");
+}
+
+
+//if else  if for remarks
+
+if(percentage>=80)
+{
+ printf("Remarks: Excellent \n");
+}
+else if(percentage>=70)
+{
+ printf("Remarks: Very Good \n");
+}
+else if(percentage>=60)
+{
+ printf("Remarks: Good \n");
+}
+else if(percentage>=50)
+{
+ printf("Remarks: Average \n");
+}
+else if(percentage>=40)
+{
+ printf("Remarks: Below Average \n");
+}
+else if(percentage>=33)
+{
+ printf("Remarks: Needs improvement \n");
+}
+else
+{
+ printf("Remarks: Not graded \n");
+}
+
+int supply = 0;
+
+if(math<33)
+{
+ printf("You have supply in math. \n");
+ //supply++;
+}
+if(biology<33)
+{
+ printf("You have supply in biology. \n");
+ //supply++;
+}
+if(english<33)
+{
+ printf("You have supply in english. \n");
+ //supply++;
+}
+if(physics<33)
+{
+ printf("You have supply in physics. \n");
+ //supply++;
+}
+if(chemistry<33)
+{
+ printf("You have supply in chemistry. \n");
+ //supply++;
+}
+
+//printf("You have %d supply.", supply);	
+}
